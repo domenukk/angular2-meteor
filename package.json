@@ -10,9 +10,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
 
-    "preinstall": "npm install autodts",
-    "postinstall": "autodts link",
-    "prepublish": "tsc && autodts generate"
+    "preinstall": "",
+    "postinstall": "",
+    "prepublish": "tsc -d main.ts"
 
   },
 

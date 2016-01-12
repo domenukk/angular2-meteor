@@ -1,2 +1,14 @@
 .idea
 node_modules
+
+*.d.ts
+*.js
+!/typings/**/*
+!typings/*
+!**/typings/**/*
+
+!package.js
+!system_config.js
+
+!packages/ng2-compilers/**/*
+
