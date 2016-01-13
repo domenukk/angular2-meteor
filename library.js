@@ -7,4 +7,4 @@ global.rxjs = require('rxjs');
 });
 */
 
-module.require = require("./main");
+module.exports = require("./main");

@@ -8,6 +8,11 @@ import {defaultIterableDiffers} from 'angular2/change_detection';
 
 import {MongoCursorDifferFactory} from './mongo_cursor_differ';
 
+/**
+ * Gets the provider list that should be passed into angular for bootstrrapping
+ * @returns {Array}
+ * @private
+ */
 function _get_provider_list() {
     const providers = [];
     const factories = defaultIterableDiffers.factories;
