@@ -14,7 +14,12 @@ module.exports = {
     loaders: [
       {
         test: /\.ts$/,
-        loader: 'awesome-typescript',
+        loader: 'ts-loader',
+
+        compilerOptions: {
+          module: "commonjs",
+          sourceMap: true
+        },
         include: path.resolve('.'),
         exclude: /node_modules/
       }
