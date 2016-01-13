@@ -2,24 +2,20 @@
   "name": "angular2-meteor-client",
   "version": "0.3.2",
   "description": "Use Angular 2.0 and Meteor on in a non-meteor client environment. Fork of the non-npm http://www.angular-meteor.com/ package",
-  "main": "main.js",
+  "main": "dist/angular2-meteor-client.bundle.js",
   "directories": {
     "example": "examples",
     "test": "tests"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-
     "preinstall": "",
     "postinstall": "",
     "prepublish": "tsc -d main.ts"
-
   },
-
   "typescript": {
     "definition": "index.d.ts"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/domenukk/angular2-meteor-client.git"
@@ -45,6 +41,7 @@
   },
   "devDependencies": {
     "@lib/autodts-generator": "~0.0.1",
+    "awesome-typescript-loader": "^0.15.9",
     "typescript": "~1.5.3"
   }
 }

@@ -2,7 +2,10 @@
 node_modules
 
 *.d.ts
-*.js
+**/*.js
+main.js
+!library.js
+!webpack.config.js
 !/typings/**/*
 !typings/*
 !**/typings/**/*
@@ -11,4 +14,6 @@ node_modules
 !system_config.js
 
 !packages/ng2-compilers/**/*
-
+g
+# we want to be able to install this via npm.
+!dist/*

@@ -1,6 +1,8 @@
 /// <reference path="../../typings/angular2.d.ts" />
 /// <reference path="../../typings/meteor/meteor.d.ts" />
 
+import {Blaze} from 'meteor-blaze'
+
 import {Attribute, OnDestroy, Component, View, ElementRef} from 'angular2/core';
 
 @Component({
