@@ -14,7 +14,7 @@ function buildGlobals() {
     }
     // everything we need for Meteor
     global.rxjs = require('rxjs');
-    global.Meteor = require('meteor-client-side');
+    require('script-loader!meteor-client-side');
     global.Blaze = require("meteor-blaze")(Meteor, $);
     global.EJSON = global.Meteor.EJSON;
 }
