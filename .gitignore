@@ -17,3 +17,4 @@ node_modules
 
 # we want to be able to install this via npm.
 !dist/*
+!dist/**/*
