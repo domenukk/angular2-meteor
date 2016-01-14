@@ -11,6 +11,7 @@ node_modules
 
 !package.js
 !system_config.js
+!make.js
 
 !packages/ng2-compilers/**/*
 

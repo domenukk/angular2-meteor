@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "preinstall": "",
     "postinstall": "",
-    "prepublish": "webpack"
+    "prepublish": ""
   },
   "repository": {
     "type": "git",
@@ -31,14 +31,10 @@
   },
   "homepage": "https://github.com/domenukk/angular2-meteor-client#readme",
   "dependencies": {
+    "meteor-client": "^1.2.8",
+    "angular2": "^2.0.0-beta.1"
   },
   "devDependencies": {
-    "@lib/dependency-example": "0.0.3",
-    "angular2": "^2.0.0-beta.1",
-    "autodts": "~0.0.6",
-    "meteor-client": "^1.2.8",
-    "awesome-typescript-loader": "^0.15.9",
-    "ts-loader": "^0.7.2",
     "typescript": "^1.7.5"
   }
 }
