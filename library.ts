@@ -1,11 +1,11 @@
 function buildGlobals() {
-  // We can but we don't want to use a jQuery like library.
+  // Sadly, we seem to have to use a jQuery like library here...
   if (typeof $ === "undefined") {
-    var $ = null;
+    var {$} = require('zepto-browserify');
   }
-
-  global._ = require('lodash'); // We do want underscore/lodash.
-
+  if (typeof _ === "undefined") {
+    global._ = require('lodash'); // We do want underscore/lodash.
+  }
   // everything we need for Meteor
   global.rxjs = require('rxjs');
   global.Meteor = require('meteor-client')($, _);
