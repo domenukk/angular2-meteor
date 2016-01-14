@@ -27,3 +27,4 @@ __export(require('./packages/ng2-accounts/main'));
 __export(require('./packages/ng2-accounts-ui/main'));
 __export(require('./packages/ng2-pagination/src/ng2-pagination'));
 __export(require("./main"));
+//# sourceMappingURL=library.js.map
