@@ -5,11 +5,11 @@
 
 import {TypeDecorator} from 'angular2/core';
 
-import {makeDecorator} from 'angular2/decorators';
+import {makeDecorator} from 'angular2/router';
 
 import {ComponentInstruction} from 'angular2/router';
 
-import {CanActivate} from 'angular2/router_dev';
+import {CanActivate} from 'angular2/router';
 
 class InjectUserAnnotation {
   constructor(public propName: string = 'user') {}

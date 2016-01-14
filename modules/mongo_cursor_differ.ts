@@ -4,9 +4,9 @@
 
 import {ChangeDetectorRef} from 'angular2/core';
 
-import {DefaultIterableDifferFactory, CollectionChangeRecord} from 'angular2/change_detection';
+import {DefaultIterableDifferFactory, CollectionChangeRecord} from 'angular2/core';
 
-import {ObservableWrapper} from 'angular2/facade';
+import {ObservableWrapper} from 'angular2/core';
 
 import {MongoCursorObserver, AddChange, MoveChange, RemoveChange} from './mongo_cursor_observer';
 

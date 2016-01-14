@@ -1,7 +1,7 @@
 /// <reference path="../typings/angular2-meteor.d.ts" />
 'use strict';
 var core_1 = require('angular2/core');
-var change_detection_1 = require('angular2/change_detection');
+var core_2 = require('angular2/core');
 var mongo_cursor_differ_1 = require('./mongo_cursor_differ');
 /**
  * Gets the provider list that should be passed into angular for bootstrrapping
@@ -10,7 +10,7 @@ var mongo_cursor_differ_1 = require('./mongo_cursor_differ');
  */
 function _get_provider_list() {
     var providers = [];
-    var factories = change_detection_1.defaultIterableDiffers.factories;
+    var factories = core_2.defaultIterableDiffers.factories;
     if (factories) {
         factories.push(new mongo_cursor_differ_1.MongoCursorDifferFactory());
     }

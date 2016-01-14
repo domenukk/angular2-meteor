@@ -4,7 +4,7 @@
 
 import {provide, IterableDiffers} from 'angular2/core';
 
-import {defaultIterableDiffers} from 'angular2/change_detection';
+import {defaultIterableDiffers} from 'angular2/core';
 
 import {MongoCursorDifferFactory} from './mongo_cursor_differ';
 

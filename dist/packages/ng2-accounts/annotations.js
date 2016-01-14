@@ -6,8 +6,8 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var decorators_1 = require('angular2/decorators');
-var router_dev_1 = require('angular2/router_dev');
+var router_1 = require('angular2/router');
+var router_2 = require('angular2/router');
 var InjectUserAnnotation = (function () {
     function InjectUserAnnotation(propName) {
         if (propName === void 0) { propName = 'user'; }
@@ -60,5 +60,5 @@ var RequireUserAnnotation = (function (_super) {
         return !!Meteor.user();
     };
     return RequireUserAnnotation;
-})(router_dev_1.CanActivate);
-exports.RequireUser = decorators_1.makeDecorator(RequireUserAnnotation);
+})(router_2.CanActivate);
+exports.RequireUser = router_1.makeDecorator(RequireUserAnnotation);

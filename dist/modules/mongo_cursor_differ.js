@@ -5,8 +5,8 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var change_detection_1 = require('angular2/change_detection');
-var facade_1 = require('angular2/facade');
+var core_1 = require('angular2/core');
+var core_2 = require('angular2/core');
 var mongo_cursor_observer_1 = require('./mongo_cursor_observer');
 var MongoCursorObserverFactory = (function () {
     function MongoCursorObserverFactory() {
@@ -29,7 +29,7 @@ var MongoCursorDifferFactory = (function (_super) {
         return new MongoCursorDiffer(cdRef, new MongoCursorObserverFactory());
     };
     return MongoCursorDifferFactory;
-})(change_detection_1.DefaultIterableDifferFactory);
+})(core_1.DefaultIterableDifferFactory);
 exports.MongoCursorDifferFactory = MongoCursorDifferFactory;
 var MongoCursorDiffer = (function () {
     function MongoCursorDiffer(cdRef, obsFactory) {
@@ -63,7 +63,7 @@ var MongoCursorDiffer = (function () {
             this._destroyObserver();
             this._cursor = cursor;
             this._curObserver = this._obsFactory.create(cursor);
-            this._subscription = facade_1.ObservableWrapper.subscribe(this._curObserver, zone.bind(function (changes) {
+            this._subscription = core_2.ObservableWrapper.subscribe(this._curObserver, zone.bind(function (changes) {
                 _this._updateLatestValue(changes);
             }));
         }
@@ -133,7 +133,7 @@ var MongoCursorDiffer = (function () {
         }
     };
     MongoCursorDiffer.prototype._createChangeRecord = function (currentIndex, prevIndex, item) {
-        var record = new change_detection_1.CollectionChangeRecord(item);
+        var record = new core_1.CollectionChangeRecord(item);
         record.currentIndex = currentIndex;
         record.previousIndex = prevIndex;
         return record;

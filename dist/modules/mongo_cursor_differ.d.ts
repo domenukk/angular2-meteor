@@ -1,6 +1,6 @@
 /// <reference path="../../typings/angular2-meteor.d.ts" />
 import { ChangeDetectorRef } from 'angular2/core';
-import { DefaultIterableDifferFactory } from 'angular2/change_detection';
+import { DefaultIterableDifferFactory } from 'angular2/core';
 import { MongoCursorObserver } from './mongo_cursor_observer';
 export interface ObserverFactory {
     create(cursor: Object): Object;
