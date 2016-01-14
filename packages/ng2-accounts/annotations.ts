@@ -5,7 +5,7 @@
 
 import {TypeDecorator} from 'angular2/core';
 
-import {makeDecorator} from 'angular2/router';
+import {makeDecorator} from 'angular2/src/core/util/decorators';
 
 import {ComponentInstruction} from 'angular2/router';
 
