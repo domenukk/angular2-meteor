@@ -1,3 +1,8 @@
+/*
+ * Disclaimer: Please don't judge my general code quality on this file.
+ * It's supposed to be a hackish hack to make this work _somehow_.
+ * If you know a better way to do it, feel free <3
+ */
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
@@ -15,8 +20,9 @@ function buildGlobals() {
     // everything we need for Meteor
     global.rxjs = require('rxjs');
     require('script-loader!meteor-client-side');
+    Meteor._ = Meteor.underscore = _;
+    global.EJSON = EJSON;
     global.Blaze = require("meteor-blaze")(Meteor, $);
-    global.EJSON = global.Meteor.EJSON;
 }
 /* Instead of globals, we could use
  new webpack.ProvidePlugin({
