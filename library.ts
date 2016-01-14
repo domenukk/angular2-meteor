@@ -1,4 +1,10 @@
 function buildGlobals() {
+
+  //TODO: Figure out way to make this nice and configurable
+  global.__meteor_runtime_config__ = {};
+  __meteor_runtime_config__.DDP_DEFAULT_CONNECTION_URL = 'http://localhost:3000';
+
+
   // Sadly, we seem to have to use a jQuery like library here...
   if (typeof $ === "undefined") {
     var $ = require('jquery');
@@ -8,11 +14,11 @@ function buildGlobals() {
   }
   // everything we need for Meteor
   global.rxjs = require('rxjs');
-  global.Meteor = require('meteor-client')($, _);
-  global.Blaze = global.Meteor.Blaze;
+  global.Meteor = require('meteor-client-side');
+  global.Blaze = require("meteor-blaze")(Meteor, $);
   global.EJSON = global.Meteor.EJSON;
-
 }
+
 
 /* Instead of globals, we could use
  new webpack.ProvidePlugin({
