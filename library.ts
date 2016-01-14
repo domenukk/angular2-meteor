@@ -1,7 +1,7 @@
 function buildGlobals() {
   // Sadly, we seem to have to use a jQuery like library here...
   if (typeof $ === "undefined") {
-    var {$} = require('zepto-browserify');
+    var $ = require('jquery');
   }
   if (typeof _ === "undefined") {
     global._ = require('lodash'); // We do want underscore/lodash.
