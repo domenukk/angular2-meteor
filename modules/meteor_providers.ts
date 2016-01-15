@@ -26,4 +26,4 @@ function _get_provider_list() {
     return providers;
 }
 
-export var providers = _get_provider_list();
+export var MeteorProviders = _get_provider_list();

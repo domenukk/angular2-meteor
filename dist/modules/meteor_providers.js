@@ -19,4 +19,4 @@ function _get_provider_list() {
     }));
     return providers;
 }
-exports.providers = _get_provider_list();
+exports.MeteorProviders = _get_provider_list();
