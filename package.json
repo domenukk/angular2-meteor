@@ -33,8 +33,9 @@
   "dependencies": {
     "angular2": "^2.0.0-beta.1",
     "jquery": "^2.2.0",
-    "meteor-client": "^1.2.8",
-    "meteor-client-side": "git+https://github.com/domenukk/meteor-client-side.git"
+    "meteor-blaze": "^1.2.9",
+    "meteor-client-side": "^0.2.3",
+    "meteor-htmljs": "^1.2.7"
   },
   "devDependencies": {
     "typescript": "^1.7.5"

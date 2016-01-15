@@ -1,3 +1,7 @@
+This package can be used in an Angular2 beta client app to add Meteor client foo using Webpack.
+
+anything below this line is a copy from the Meteor package.
+
 # Angular2-Meteor
 Angular2 + Meteor integration.
 

@@ -2,15 +2,14 @@
  * Disclaimer: Please don't judge my general code quality on this file.
  * It's supposed to be a hackish hack to make this work _somehow_.
  * If you know a better way to do it, feel free <3
+ *
+ * TODO: Make this webpack-unglobal somehow
  */
 
 function buildGlobals() {
-
   //TODO: Figure out way to make this nice and configurable
   global.__meteor_runtime_config__ = {};
   __meteor_runtime_config__.DDP_DEFAULT_CONNECTION_URL = 'http://localhost:3000';
-
-
   // Sadly, we seem to have to use a jQuery like library here...
   if (typeof $ === "undefined") {
     var $ = require('jquery');
@@ -20,10 +19,11 @@ function buildGlobals() {
   }
   // everything we need for Meteor
   global.rxjs = require('rxjs');
-  require('script-loader!meteor-client-side');
+  require('script-loader!meteor-client-side'); // this will only work in webpack
   Meteor._ = Meteor.underscore = _;
-  global.EJSON = EJSON;
-  global.Blaze = require("meteor-blaze")(Meteor, $);
+  require("meteor-htmljs")(Meteor);
+  require("meteor-blaze")(Meteor, $);
+  global.Blaze = Meteor.Blaze;
 }
 
 
@@ -34,7 +34,6 @@ function buildGlobals() {
  });
  But then we can no longer try it in the command prompt
  */
-buildGlobals();
 
 export * from './packages/ng2-accounts/main';
 export * from './packages/ng2-accounts-ui/main';

@@ -21,8 +21,9 @@ function buildGlobals() {
     global.rxjs = require('rxjs');
     require('script-loader!meteor-client-side');
     Meteor._ = Meteor.underscore = _;
-    global.EJSON = EJSON;
-    global.Blaze = require("meteor-blaze")(Meteor, $);
+    require("meteor-htmljs")(Meteor);
+    require("meteor-blaze")(Meteor, $);
+    global.Blaze = Meteor.Blaze;
 }
 /* Instead of globals, we could use
  new webpack.ProvidePlugin({
