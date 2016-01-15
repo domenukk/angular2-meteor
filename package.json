@@ -1,6 +1,6 @@
 {
   "name": "angular2-meteor-client",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Use Angular 2.0 and Meteor on in a non-meteor client environment. Fork of the non-npm http://www.angular-meteor.com/ package",
   "main": "dist/library.js",
   "directories": {
@@ -32,10 +32,15 @@
   "homepage": "https://github.com/domenukk/angular2-meteor-client#readme",
   "dependencies": {
     "angular2": "^2.0.0-beta.1",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.33.3",
     "jquery": "^2.2.0",
     "meteor-blaze": "^1.2.9",
     "meteor-client-side": "^0.2.3",
-    "meteor-htmljs": "^1.2.7"
+    "meteor-htmljs": "^1.2.7",
+    "reflect-metadata": "^0.1.2",
+    "rxjs": "^5.0.0-beta.0",
+    "zone.js": "^0.5.10"
   },
   "devDependencies": {
     "typescript": "^1.7.5"

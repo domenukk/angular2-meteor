@@ -1,4 +1,5 @@
 This package can be used in an Angular2 beta client app to add Meteor client foo using Webpack.
+If you'd want to build the dist folder yourself, `npm install -g typescript`, delete the folder, run `node make`.
 
 anything below this line is a copy from the Meteor package.
 
