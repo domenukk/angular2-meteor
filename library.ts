@@ -7,24 +7,10 @@ if (typeof __meteor_runtime_config__ === 'undefined') {
   };
 }
 
-// Everything we need from Meteor
-const modules = [
-  'Package',
-  'Meteor',
-  'Log',
-  'Tracker',
-  'DDP',
-  'Mongo',
-  'check',
-  'Match',
-  '_',
-  'Random',
-  'EJSON'
-];
-const moduleLinks = modules.map((module) => `${module}=${module}`).join('&');
-
-const meteorExports = require('imports?!' +
-  `exports?${moduleLinks}!` +
+const meteorExports = require('imports?' +
+  '__meteor_runtime_config__=>{DDP_DEFAULT_CONNECTION_URL: "http://localhost:3000"}!' +
+  'exports?Package=Package&Meteor=Meteor&Log=Log&Tracker=Tracker&DDP=DDP' +
+  '&Mongo=Mongo&check=check&Match=Match&_=_&Random=Random&EJSON=EJSON!' +
   'meteor-client-side'); // This will only work in webpack
 
 export const { Meteor, _, DDP, Mongo, Tracker, Match, Random, EJSON } = meteorExports;

@@ -9,31 +9,18 @@ if (typeof __meteor_runtime_config__ === 'undefined') {
         DDP_DEFAULT_CONNECTION_URL: 'http://localhost:3000'
     };
 }
-// Everything we need from Meteor
-var modules = [
-    'Package',
-    'Meteor',
-    'Log',
-    'Tracker',
-    'DDP',
-    'Mongo',
-    'check',
-    'Match',
-    '_',
-    'Random',
-    'EJSON'
-];
-var moduleLinks = modules.map(function (module) { return (module + "=" + module); }).join('&');
-var meteorExports = require('imports?!' +
-    ("exports?" + moduleLinks + "!") +
+var meteorExports = require('imports?' +
+    '__meteor_runtime_config__=>{DDP_DEFAULT_CONNECTION_URL: "http://localhost:3000"}!' +
+    'exports?Package=Package&Meteor=Meteor&Log=Log&Tracker=Tracker&DDP=DDP' +
+    '&Mongo=Mongo&check=check&Match=Match&_=_&Random=Random&EJSON=EJSON!' +
     'meteor-client-side'); // This will only work in webpack
 exports.Meteor = meteorExports.Meteor, exports._ = meteorExports._, exports.DDP = meteorExports.DDP, exports.Mongo = meteorExports.Mongo, exports.Tracker = meteorExports.Tracker, exports.Match = meteorExports.Match, exports.Random = meteorExports.Random, exports.EJSON = meteorExports.EJSON;
 exports.default = exports.Meteor;
 exports.Meteor._ = exports.Meteor.underscore = exports._;
 require('meteor-htmljs')(exports.Meteor);
 //const rxjs = require('rxjs');
-var $ = require('jquery');
-require('meteor-blaze')(exports.Meteor, $);
+exports.$ = require('jquery');
+require('meteor-blaze')(exports.Meteor, exports.$);
 exports.Blaze = exports.Meteor.Blaze;
 __export(require('./packages/ng2-accounts/main'));
 __export(require('./packages/ng2-accounts-ui/main'));
