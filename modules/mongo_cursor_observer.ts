@@ -2,7 +2,7 @@
 
 'use strict';
 
-import {EventEmitter} from 'angular2/core';
+import {EventEmitter} from 'angular2/src/facade/async';
 
 import {CursorHandle} from './cursor_handle';
 
@@ -71,7 +71,7 @@ export class MongoCursorObserver {
     let subscription = new Subscription(next, error, complete);
     this._subs.push(subscription);
 
-    // If no subscriber has subscribed ever. 
+    // If no subscriber has subscribed ever.
     if (!this._isSubscribed) {
       this._isSubscribed = true;
 

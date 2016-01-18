@@ -4,7 +4,8 @@
 
 import {ChangeDetectorRef} from 'angular2/core';
 
-import {DefaultIterableDifferFactory, CollectionChangeRecord} from 'angular2/src/core/change_detection/differs/default_iterable_differ';
+import {DefaultIterableDifferFactory, CollectionChangeRecord}
+  from 'angular2/src/core/change_detection/differs/default_iterable_differ';
 
 import {ObservableWrapper} from 'angular2/src/facade/async';
 

@@ -77,7 +77,7 @@ var MongoCursorObserver = (function () {
         var next = _a.next, error = _a.error, complete = _a.complete;
         var subscription = new Subscription(next, error, complete);
         this._subs.push(subscription);
-        // If no subscriber has subscribed ever. 
+        // If no subscriber has subscribed ever.
         if (!this._isSubscribed) {
             this._isSubscribed = true;
             if (this._added.length) {
