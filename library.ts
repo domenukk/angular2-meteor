@@ -14,20 +14,21 @@ const meteorExports = require('imports?' +
 export const { Meteor, _, DDP, Mongo, Tracker, Match, Random, EJSON } = meteorExports;
 export default Meteor;
 Meteor._ = Meteor.underscore = _;
-
 require('meteor-htmljs')(Meteor);
 
 if (typeof METEOR_NO_BLAZE === 'undefined') {
   // Load jQuery and Blaze and export it.
-  export const $ = require('jquery');
+  const $ = require('jquery');
   require('meteor-blaze')(Meteor, $);
   export const Blaze = Meteor.Blaze;
 
-  // Export accounts-ui (needs Blaze)
-  export * from './packages/ng2-accounts/main';
   export * from './packages/ng2-accounts-ui/main';
 }
 
+// Export accounts-ui (needs Blaze)
+export * from './packages/ng2-accounts/main';
+
+const rxjs = require('rxjs');
 export * from './packages/ng2-pagination/src/ng2-pagination';
 
 export * from './main'
